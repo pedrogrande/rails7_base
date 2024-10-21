@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_16_015401) do
+ActiveRecord::Schema[8.0].define(version: 2024_10_20_043059) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension "pg_catalog.plpgsql"
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false

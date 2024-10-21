@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <title><%= content_for(:title) || "P2plearn" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= yield :head %>
+    <%= render 'layouts/partials/stylesheets' %>
+    <%= render 'layouts/partials/javascript' %>
+  </head>
+  <body>
+    <main class="d-flex flex-nowrap">
+      <%= render 'layouts/partials/sidebar' %>
+      <div class="container p-0">
+        <% render 'layouts/partials/header_nav' %>
+        <nav class="navbar bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+          </div>
+        </nav>
+        <div class="d-flex flex-column justify-content-between h-100">
+          <div class="yield p-3">
+            <%= yield %>
+          </div>
+          <%= render 'layouts/partials/dashboard_footer' %>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

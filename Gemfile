@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 ruby "3.3.4"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.2.1"
+# gem "rails", "~> 7.2.1"
+gem 'rails', '~> 8.0.0.rc1'
 
 # gem 'acts_as_list'
 gem 'acts-as-taggable-on'

@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+validates :eth_address, presence: true, uniqueness: true
+  validates :eth_nonce, presence: true, uniqueness: true
+  validates :username, presence: true, uniqueness: true
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rails g scaffold Member eth_address:text eth_nonce:text username:text

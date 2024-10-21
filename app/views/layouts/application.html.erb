@@ -7,35 +7,49 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= yield :head %>
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css"
-          integrity="sha512-MQXduO8IQnJVq1qmySpN87QQkiR1bZHtorbJBD0tzy7/0U9+YIC93QWHeGTEoojMVHWWNkoCp8V6OzVSYrX0oQ=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/themes/dark.min.css"
-          integrity="sha512-9j8LE+fuBZgXOsSyiXCw0LmM4LSLIo94AYem4pQzyqlbw5wC4qK2ytHjOLy9pGH3DbvoXawLPuiVfr8gXOKXWw=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"
-            integrity="sha512-K/oyQtMXpxI4+K0W7H25UopjM8pzq0yrVdFdG21Fh5dBe91I40pDd9A4lzNlHPHBIP2cwZuoxaUSX0GJSObvGA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
-    <%= javascript_importmap_tags %>
-    <%= hotwire_livereload_tags if Rails.env.development? %>
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha256-XfA0ppGOANs88Ds+9FqVLy3xIGzT/25K/VLmRRxE9ow=" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <!-- Dark mode -->
+    <%= render 'layouts/dashboard/darkmodejs' %>
+    <%= render 'layouts/partials/stylesheets' %>
+    <%= render 'layouts/partials/javascript' %>
   </head>
   <body>
-    <%= render 'layouts/partials/centered_navbar' %>
-    <% render 'layouts/partials/header_nav' %>
-    <% render 'layouts/partials/dashboard_header' %>
-    <div class="container py-4">
-      <%= yield %>
-    </div>
-    <%= render 'layouts/partials/big_footer' %>
-    <% render 'layouts/partial/dashboard_footer' %>
+    <!-- **************** MAIN CONTENT START **************** -->
+    <main>
+      <!-- Sidebar START -->
+      <%= render 'layouts/dashboard/sidebar' %>
+      <!-- Sidebar END -->
+      <!-- Page content START -->
+      <div class="page-content">
+        <!-- Top bar START -->
+        <%= render 'layouts/dashboard/topbar' %>
+        <!-- Top bar END -->
+        <!-- Page main content START -->
+        <%= yield %>
+        <!-- Page main content END -->
+      </div>
+      <!-- Page content END -->
+    </main>
+    <!-- **************** MAIN CONTENT END **************** -->
+    <!-- Back to top -->
+    <div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
+    <!-- Bootstrap JS -->
+    <!--<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
+    <!-- Vendors -->
+    <!--<script src="assets/vendor/purecounterjs/dist/purecounter_vanilla.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs@1.5.0/dist/purecounter_vanilla.min.js"></script>
+    <!--<script src="assets/vendor/apexcharts/js/apexcharts.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.54.1/apexcharts.min.js" integrity="sha512-yR5RFcmaHqsGbB9WPG104Fk3+x2s9fMYCgA09VaRT2Lqpay6oNhKldYsZKU/rpYqbsNVhN5+RTbQBSd9+DhL6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.2.1/css/OverlayScrollbars.min.css" integrity="sha512-cq5FLBhis1LBAD2f4kznRg1dqD+TNGuUwv2CKX6Q7wLKxdqaPauEew/CkOIvQhMW+2PyqJEd5ZKDZGShXvMlWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <script src="/overlayscrollbars.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-stepper@1.7.0/dist/js/bs-stepper.min.js" integrity="sha256-INfYp5owpb0btFquNHGlhSxgGYrFlGYRU2oN/3jWGeM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/2.0.2/quill.min.js" integrity="sha512-1nmY9t9/Iq3JU1fGf0OpNCn6uXMmwC1XYX9a6547vnfcjCY1KvU9TE5e8jHQvXBoEH7hcKLIbbOjneZ8HCeNLA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/js/glightbox.min.js" integrity="sha512-RBWI5Qf647bcVhqbEnRoL4KuUT+Liz+oG5jtF+HP05Oa5088M9G0GxG0uoHR9cyq35VbjahcI+Hd1xwY8E1/Kg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/choices.js/11.0.2/choices.min.js" integrity="sha512-V5s0HYmH9/kFasFbTo6Zfhhn6S4hkvpEhZRh53aPPiXsV8kpODYIrxAT/Q3RzvQYY43erK1rSB0na+0ICoIpkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--<script src="assets/vendor/overlay-scrollbar/js/overlayscrollbars.min.js"></script>-->
+    <!-- Template Functions -->
+    <%# render 'layouts/dashboard/eduportjs' %>
+    <script src="/eduport.js"></script>
   </body>
 </html>

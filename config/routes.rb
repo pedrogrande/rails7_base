@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
+  get 'admin', to: "admin#dashboard"
+  get 'dashboard', to: "admin#eduport"
+  get 'eduport', to: "admin#eduport"
+  get 'settings', to: "admin#settings"
+  get 'earnings', to: "admin#earnings"
+  get 'reviews', to: "admin#reviews"
+  get 'courses', to: "admin#courses"
+  get 'course_details', to: "admin#course_details"
+  get 'edit_course_details', to: "admin#edit_course_details"
+  get 'students', to: "admin#students"
+  get 'instructors', to: "admin#instructors"
   root "public#home"
-  get "public/about"
-  get "public/contact"
+  get "about", to: 'public#about'
+  get "contact", to: 'public#contact'
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
