@@ -1,0 +1,20 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap');
+  h1 {
+    font-family: VT323,'Seven Segment', sans-serif;
+  }
+   h4, p {
+    font-family: "M PLUS 1 Code", monospace;
+  }
+</style>
+<div class="p-5 mb-4 bg-black rounded-4 border border-light-subtle">
+  <div class="container-fluid">
+    <h1 class="mb-4 lh-1 text-ufo">MISSION: CR01-C01</h1>
+    <h4 class="sub-title">Find Future's Edge HQ</h4>
+    <!--<p class="col-md-8 fs-4">To begin your training missions, you must first prove yourself worthy by solving puzzles. Each puzzle you solve will bring you closer to Agency Headquarters.</p>-->
+  </div>
+</div>
+<%#= @encoded_letters %>
+<%= turbo_frame_tag "code-container", class: 'position-relative card card-body bg-tertiary d-flex justify-content-center align-items-center text-uppercase fw-semibold fs-5 w-100 my-5 gap-1' do %>
+  <%#= render partial: 'public/encoded_letter', locals: {encoded_letter: encoded_letter, index: index} %>
+<% end %>

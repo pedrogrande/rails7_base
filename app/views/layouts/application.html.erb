@@ -12,7 +12,10 @@
     <!-- Dark mode -->
     <%= render 'layouts/dashboard/darkmodejs' %>
     <%= render 'layouts/partials/stylesheets' %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= render 'layouts/partials/javascript' %>
+    <%= javascript_importmap_tags %>
+    <%= hotwire_livereload_tags if Rails.env.development? %>
   </head>
   <body>
     <!-- **************** MAIN CONTENT START **************** -->

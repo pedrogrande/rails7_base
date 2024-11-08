@@ -1,22 +1,95 @@
-<div class="p-5 mb-4 bg-body-tertiary rounded-3">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Bruno+Ace+SC&family=Cairo:wght@200..1000&family=Dongle&family=Gayathri:wght@100;400;700&family=Genos:ital,wght@0,100..900;1,100..900&family=Goldman:wght@400;700&family=Honk&family=Kiwi+Maru&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&family=Red+Rose:wght@300..700&family=Russo+One&family=Smooch+Sans:wght@100..900&family=Syne+Mono&family=Teko:wght@300..700&family=Tektur:wght@400..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Dots&display=swap');
+</style>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@1&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=melodrama@1&display=swap" rel="stylesheet">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap');
+  body {
+    // background-color: #0f1322;
+    background: #232526;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #232526, #414345);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #232526, #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: #0f1322;
+  }
+  h1,h2,h3,h4,h5,h6,a.btn {
+    color: #0f1322;
+    font-family: Gayathri,"Averia Sans Libre","Red Rose","Smooch Sans",Dongle,"Kiwi Maru",Tektur,Teko,Genos,ranade,"Clash Grotesk",Genos,Teko, monospace;
+    line-height: 1;
+  }
+  a.btn {
+    letter-spacing: 0.2em;
+  }
+  .navbrand {
+    font-family: Dongle,Genos,Goldman,Tektur,Tomorrow, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+  text-transform: uppercase;
+  //background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+
+  background: linear-gradient(to right,hsl(98 100% 62%),hsl(204 100% 59%));
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  }
+  .hero {
+     // background: rgb(157,223,235);
+    // background: linear-gradient(180deg, #9cdfeb 0%, #84c6d2 67%);
+
+  //background: #24C6DC;  /* fallback for old browsers */
+  //background: -webkit-linear-gradient(to top, #24C6DC, #514A9D);  /* Chrome 10-25, Safari 5.1-6 */
+  //background: linear-gradient(to top, #24C6DC, #514A9D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #00B4DB;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // background: #2193b0;  /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to bottom, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to bottom, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  .card-gradient-one {
+    background: #8e9eab;  /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to bottom, #8e9eab, #eef2f3);  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to bottom, #8e9eab, #eef2f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  .card-gradient-two {
+   background: #FF0099;  /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to bottom, #FF0099, #493240);  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to bottom, #FF0099, #493240); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+  }
+</style>
+<div class="p-5 mb-4 hero rounded-5 border border-light-subtle" style=" ">
   <div class="container-fluid py-5">
-    <h1 class="display-5 fw-bold">Custom jumbotron</h1>
-    <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
-    <button class="btn btn-primary btn-lg" type="button">Example button</button>
+    <h1 class="display-3 revalia-regular mb-4 lh-1 text-dark">Build your capabilities <br>
+      <span class="fs-1">and take control of your future</span></h1>
+    <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. </p>
+    <button class="btn btn-success fw-bold btn-lg text-uppercase" type="button">Press Play</button>
   </div>
 </div>
 <div class="row align-items-md-stretch">
   <div class="col-md-6">
-    <div class="h-100 p-5 text-bg-dark rounded-3">
-      <h2>Change the background</h2>
-      <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
+    <div class="h-100 p-5  rounded-5 border border-light-subtle text-bg-dark">
+      <h2 class="fs-3 text-white">Change the background</h2>
+      <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. </p>
       <button class="btn btn-outline-light" type="button">Example button</button>
     </div>
   </div>
-  <div class="col-md-6">
-    <div class="h-100 p-5 bg-body-tertiary border rounded-3">
-      <h2>Add borders</h2>
-      <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+  <div class="col-md-3">
+    <div class="h-100 p-5  rounded-5 border border-light-subtle card-gradient-one">
+      <h2 class="fs-4">Change the background</h2>
+      <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. </p>
+      <button class="btn btn-outline-light" type="button">Example button</button>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="h-100 p-5 rounded-5 border border-light-subtle card-gradient-two">
+      <h2 class="fs-4">Add borders</h2>
+      <p>Or, keep it light and add a border for some added definition to the boundaries of your content. </p>
       <button class="btn btn-outline-secondary" type="button">Example button</button>
     </div>
   </div>

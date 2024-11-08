@@ -1,2 +1,153 @@
 <h1>Public#contact</h1>
 <p>Find me in app/views/public/contact.html.erb</p>
+<style>
+  .wrapper {
+  margin:150px auto;
+  position:relative;
+  display:flex;
+  gap: 40px;
+  padding:40px;
+  width: 480px;
+  height:480px;
+  background: #aaa;
+  border-radius: 30px;
+  }
+  .start-col {
+  background:#999;
+  position:relative;
+  border-radius:20px;
+  width:100px;
+  height: 100%;
+  box-shadow: 0 -1px 1px rgba(150,150,150,0.25) ,
+  0 -2px 2px rgba(150,150,150,0.20) ,
+  0 -4px 4px rgba(150,150,150,0.15) ,
+  0 -8px 8px rgba(150,150,150,0.10) ,
+  0 1px 1px rgba(0,0,0,0.25) ,
+  0 2px 2px rgba(0,0,0,0.20) ,
+  0 4px 4px rgba(0,0,0,0.15) ,
+  0 8px 8px rgba(0,0,0,0.10) ,
+  0 16px 16px rgba(0,0,0,0.05);
+  }
+  .leg-bars {
+  position:relative;
+  width:100%;
+  display:flex;
+  gap:20px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  }
+  .leg {
+    position:relative;
+    display:block;
+  background:#999;
+  border-radius:20px;
+  width:100%;
+  height: 100px;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 1px rgba(150,150,150,0.25) ,
+  0 -2px 2px rgba(150,150,150,0.20) ,
+  0 -4px 4px rgba(150,150,150,0.15) ,
+  0 -8px 8px rgba(150,150,150,0.10) ,
+  0 1px 1px rgba(0,0,0,0.25) ,
+  0 2px 2px rgba(0,0,0,0.20) ,
+  0 4px 4px rgba(0,0,0,0.15) ,
+  0 8px 8px rgba(0,0,0,0.10) ,
+  0 16px 16px rgba(0,0,0,0.05);
+  }
+  .base-leg {
+    // border: 20px solid #999;
+    background: #888;
+    position:relative;
+    padding:20px;
+    box-shadow:0 1px 1px rgba(0, 0, 0, 0.08),
+  0 2px 2px rgba(0, 0, 0, 0.12),
+  0 4px 4px rgba(0, 0, 0, 0.16),
+  0 8px 8px rgba(0, 0, 0, 0.20);
+  }
+  .inner-base-leg {
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    box-shadow:0 -1px 1px rgba(150,150,150,0.25)  inset,
+  0 -2px 2px rgba(150,150,150,0.20)  inset,
+  0 -4px 4px rgba(150,150,150,0.15)  inset,
+  0 -8px 8px rgba(150,150,150,0.10)  inset,
+  0 1px 1px rgba(0,0,0,0.25) inset ,
+  0 2px 2px rgba(0,0,0,0.20) inset ,
+  0 4px 4px rgba(0,0,0,0.15) inset ,
+  0 8px 8px rgba(0,0,0,0.10) inset ,
+  0 16px 16px rgba(0,0,0,0.05) inset;
+  background: #aaa;
+  }
+</style>
+<!--<div class="wrapper">
+  <div class="start-col"></div>
+  <div class="leg-bars">
+    <div class="leg"></div>
+    <div class="leg"></div>
+    <div class="leg base-leg">
+    </div>
+  </div>
+</div>-->
+<style>
+  .wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  width: 400px;
+  height: 400px;
+  background: #aaa;
+  border-radius: 30px;
+  }
+  .column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  }
+  .square {
+  width: 100px;
+  height: 100px;
+  background: #444;
+  border-radius: 20px;
+  box-shadow: 0 -1px 1px rgba(150, 150, 150, 0.25),
+  0 -2px 2px rgba(150, 150, 150, 0.20),
+  0 -4px 4px rgba(150, 150, 150, 0.15),
+  0 -8px 8px rgba(150, 150, 150, 0.10),
+  0 1px 1px rgba(0, 0, 0, 0.25),
+  0 2px 2px rgba(0, 0, 0, 0.20),
+  0 4px 4px rgba(0, 0, 0, 0.15),
+  0 8px 8px rgba(0, 0, 0, 0.10),
+  0 16px 16px rgba(0, 0, 0, 0.05);
+  }
+  .col-a {
+  // background: #999;
+  border-radius: 20px;
+
+  }
+  .col-b {
+  // background: #888;
+  border-radius: 20px;
+  }
+  .col-c {
+  // background: #777;
+  border-radius: 20px;
+  }
+</style>
+<div class="wrapper">
+  <div class="column col-a">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </div>
+  <div class="column col-b">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square" style="background:#999;"></div>
+  </div>
+  <div class="column col-c">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square" style="background:#999;"></div>
+  </div>
+</div>

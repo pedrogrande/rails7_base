@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'instructors', to: "admin#instructors"
   root "public#home"
   get "about", to: 'public#about'
+  get "cipher", to: 'public#cipher'
   get "contact", to: 'public#contact'
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
