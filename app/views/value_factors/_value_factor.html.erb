@@ -1,0 +1,10 @@
+<%= content_tag :tr, id: dom_id(value_factor), class: dom_class(value_factor) do %>
+  <td class="ps-3">
+    <p class="mb-0 mt-2"><a href="#" class=""><%=  value_factor.name %></a></p>
+  </td>
+  <td class="d-flex justify-content-end">
+    <%= link_to '<i class="bi bi-eye"></i>'.html_safe, value_factor, class: 'btn btn-light btn-round me-1 mb-1 mb-md-0', data: { bs_toggle: 'tooltip', bs_title: 'Edit', bs_custom_class: "dark-tooltip"} %>
+    <%= link_to '<i class="bi-pencil text-warning"></i>'.html_safe, edit_value_factor_path(value_factor), class: 'btn btn-light btn-round me-1 mb-1 mb-md-0', data: { bs_toggle: 'tooltip', bs_title: 'Edit', bs_custom_class: "dark-tooltip"} %>
+    <%= button_to '<i class="bi-trash-fill text-danger"></i>'.html_safe, value_factor, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-light btn-round me-1 mb-1 mb-md-0', data: { bs_toggle: 'tooltip', bs_title: 'Delete', bs_custom_class: "dark-tooltip"} %>
+  </td>
+<% end %>

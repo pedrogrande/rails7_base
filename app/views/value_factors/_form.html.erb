@@ -1,0 +1,47 @@
+<%= simple_form_for(@value_factor) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <div class="row">
+      <h6>Base criteria</h6>
+      <div class="col-md-10">
+        <%= f.input :base_criteria_question, label: "Question" %>
+      </div>
+      <div class="col-md-2">
+        <%= f.input :base_criteria_value, label: "Value" %>
+      </div>
+    </div>
+    <div class="row">
+      <h6>Second criteria</h6>
+      <div class="col-md-10">
+        <%= f.input :second_criteria_question, label: "Question" %>
+      </div>
+      <div class="col-md-2">
+        <%= f.input :second_criteria_value, label: "Value" %>
+      </div>
+    </div>
+    <div class="row">
+      <h6>Third criteria</h6>
+      <div class="col-md-10">
+        <%= f.input :third_criteria_question, label: "Question" %>
+      </div>
+      <div class="col-md-2">
+        <%= f.input :third_criteria_value, label: "Value" %>
+      </div>
+    </div>
+    <div class="row">
+      <h6>Fourth criteria</h6>
+      <div class="col-md-10">
+        <%= f.input :top_criteria_question, label: "Question" %>
+      </div>
+      <div class="col-md-2">
+        <%= f.input :top_criteria_value, label: "Value" %>
+      </div>
+    </div>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  </div>
+<% end %>

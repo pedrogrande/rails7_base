@@ -1,0 +1,7 @@
+<p style="color: green"><%= notice %></p>
+<%= render @value_factor %>
+<div>
+  <%= link_to "Edit this value factor", edit_value_factor_path(@value_factor), class: 'btn btn-outline-secondary'  %> |
+  <%= link_to "Back to value factors", value_factors_path, class: 'btn btn-outline-secondary' %>
+  <%= button_to "Destroy this value factor", @value_factor, method: :delete, class: 'btn btn-outline-danger' %>
+</div>

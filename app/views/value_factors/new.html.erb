@@ -1,0 +1,9 @@
+<% content_for :title, "New value factor" %>
+<%= turbo_frame_tag "modal" do %>
+  <h1 class="h3 modal-header">
+    New value factor
+  </h1>
+  <div class="modal-body">
+    <%= render "value_factors/form", item: @value_factor %>
+  </div>
+<% end %>

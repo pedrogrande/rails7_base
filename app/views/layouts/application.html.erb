@@ -10,12 +10,25 @@
     <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha256-XfA0ppGOANs88Ds+9FqVLy3xIGzT/25K/VLmRRxE9ow=" crossorigin="anonymous">-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
     <!-- Dark mode -->
-    <%= render 'layouts/dashboard/darkmodejs' %>
+    <% render 'layouts/dashboard/darkmodejs' %>
     <%= render 'layouts/partials/stylesheets' %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= render 'layouts/partials/javascript' %>
     <%= javascript_importmap_tags %>
     <%= hotwire_livereload_tags if Rails.env.development? %>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: left;
+      }
+      a {
+        color: yellow;
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
     <!-- **************** MAIN CONTENT START **************** -->
@@ -29,30 +42,24 @@
         <%= render 'layouts/dashboard/topbar' %>
         <!-- Top bar END -->
         <!-- Page main content START -->
-        <%= yield %>
+        <div class="page-content-wrapper border">
+          <%= yield %>
+        </div>
         <!-- Page main content END -->
       </div>
       <!-- Page content END -->
     </main>
+    <div class="modal" tabindex="-1" data-controller="modal" data-action="turbo:frame-load->modal#open turbo:submit-end->modal#close">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <%= turbo_frame_tag "modal" %>
+        </div>
+      </div>
+    </div>
     <!-- **************** MAIN CONTENT END **************** -->
     <!-- Back to top -->
     <div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
     <!-- Bootstrap JS -->
-    <!--<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
-    <!-- Vendors -->
-    <!--<script src="assets/vendor/purecounterjs/dist/purecounter_vanilla.js"></script>-->
-    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs@1.5.0/dist/purecounter_vanilla.min.js"></script>
-    <!--<script src="assets/vendor/apexcharts/js/apexcharts.min.js"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.54.1/apexcharts.min.js" integrity="sha512-yR5RFcmaHqsGbB9WPG104Fk3+x2s9fMYCgA09VaRT2Lqpay6oNhKldYsZKU/rpYqbsNVhN5+RTbQBSd9+DhL6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.2.1/css/OverlayScrollbars.min.css" integrity="sha512-cq5FLBhis1LBAD2f4kznRg1dqD+TNGuUwv2CKX6Q7wLKxdqaPauEew/CkOIvQhMW+2PyqJEd5ZKDZGShXvMlWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
-    <script src="/overlayscrollbars.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bs-stepper@1.7.0/dist/js/bs-stepper.min.js" integrity="sha256-INfYp5owpb0btFquNHGlhSxgGYrFlGYRU2oN/3jWGeM=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/2.0.2/quill.min.js" integrity="sha512-1nmY9t9/Iq3JU1fGf0OpNCn6uXMmwC1XYX9a6547vnfcjCY1KvU9TE5e8jHQvXBoEH7hcKLIbbOjneZ8HCeNLA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/js/glightbox.min.js" integrity="sha512-RBWI5Qf647bcVhqbEnRoL4KuUT+Liz+oG5jtF+HP05Oa5088M9G0GxG0uoHR9cyq35VbjahcI+Hd1xwY8E1/Kg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/choices.js/11.0.2/choices.min.js" integrity="sha512-V5s0HYmH9/kFasFbTo6Zfhhn6S4hkvpEhZRh53aPPiXsV8kpODYIrxAT/Q3RzvQYY43erK1rSB0na+0ICoIpkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!--<script src="assets/vendor/overlay-scrollbar/js/overlayscrollbars.min.js"></script>-->
-    <!-- Template Functions -->
-    <%# render 'layouts/dashboard/eduportjs' %>
-    <script src="/eduport.js"></script>
+    <%= render 'layouts/partials/js_bottom' %>
   </body>
 </html>

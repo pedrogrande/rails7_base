@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :value_factors
   get 'admin', to: "admin#dashboard"
   get 'dashboard', to: "admin#eduport"
   get 'eduport', to: "admin#eduport"
